@@ -5,14 +5,13 @@ Created on Jul 4, 2017
 '''
 from jira import JIRA
 import sys, getopt
-import jiraDump
-from jiraDump import dumpIssue
+
+
 from sre_compile import isstring
 import datetime
 import re
 from jira.exceptions import JIRAError
 import json
-from orca.scripts.apps import planner
 
 
 
@@ -167,9 +166,6 @@ if __name__ == "__main__":
         
 
     else:
-        print( dumpIssue(jira, 'SBREST-439') )
-        print( dumpIssue(jira, 'SBREST-440') )
-        print( dumpIssue(jira, 'SBREST-451') )
       
         jh = JiraHelper(jira, 'SBREST')
         key = jh.createTestPlan('Test plan ', 'Normal')
